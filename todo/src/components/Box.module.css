@@ -1,0 +1,8 @@
+.box{
+    max-width: 40%;
+    min-height: 50%;
+    margin: 0 auto;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #ddd;
+}

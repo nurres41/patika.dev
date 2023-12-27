@@ -1,0 +1,22 @@
+.controlBarWrapper{
+    display: flex;
+    align-items: center;
+    padding: 12px 8px;
+}
+
+.controlBarWrapper > input{
+    width: 90%;
+    outline: none;
+    color: black;
+    padding: 4px 6px;
+    border: 0;
+}
+
+.controlBarWrapper > input::placeholder{
+    color: #ddd;
+}
+
+.controlBarWrapper > input:focus {
+    outline: none;
+}
+
