@@ -1,0 +1,102 @@
+import { createContext, useState } from 'react'
+
+const CityContext = createContext();
+
+export const CityProvider = ({ children }) => {   
+
+    const [selectedCity, setSelectedCity] = useState('Adana')
+
+    const cities = [
+      { name: "Adana" },
+      { name: "Adiyaman" },
+      { name: "Afyonkarahisar" },
+      { name: "Agri" },
+      { name: "Amasya" },
+      { name: "Ankara" },
+      { name: "Antalya" },
+      { name: "Artvin" },
+      { name: "Aydin" },
+      { name: "Balikesir" },
+      { name: "Bilecik" },
+      { name: "Bingöl" },
+      { name: "Bitlis" },
+      { name: "Bolu" },
+      { name: "Burdur" },
+      { name: "Bursa" },
+      { name: "Canakkale" },
+      { name: "Cankiri" },
+      { name: "Corum" },
+      { name: "Denizli" },
+      { name: "Diyarbakir" },
+      { name: "Edirne" },
+      { name: "Elazig" },
+      { name: "Erzincan" },
+      { name: "Erzurum" },
+      { name: "Eskisehir" },
+      { name: "Gaziantep" },
+      { name: "Giresun" },
+      { name: "Gumushane" },
+      { name: "Hakkari" },
+      { name: "Hatay" },
+      { name: "Isparta" },
+      { name: "Mersin" },
+      { name: "İstanbul" },
+      { name: "İzmir" },
+      { name: "Kars" },
+      { name: "Kastamonu" },
+      { name: "Kayseri" },
+      { name: "Kirklareli" },
+      { name: "Kirsehir" },
+      { name: "Kocaeli" },
+      { name: "Konya" },
+      { name: "Kutahya" },
+      { name: "Malatya" },
+      { name: "Manisa" },
+      { name: "Kahramanmaras" },
+      { name: "Mardin" },
+      { name: "Mugla" },
+      { name: "Mus" },
+      { name: "Nevsehir" },
+      { name: "Nigde" },
+      { name: "Ordu" },
+      { name: "Rize" },
+      { name: "Sakarya" },
+      { name: "Samsun" },
+      { name: "Siirt" },
+      { name: "Sinop" },
+      { name: "Sivas" },
+      { name: "Tekirdag" },
+      { name: "Tokat" },
+      { name: "Trabzon" },
+      { name: "Tunceli" },
+      { name: "Sanliurfa" },
+      { name: "Usak" },
+      { name: "Van" },
+      { name: "Yozgat" },
+      { name: "Zonguldak" },
+      { name: "Aksaray" },
+      { name: "Bayburt" },
+      { name: "Karaman" },
+      { name: "Kirikkale" },
+      { name: "Batman" },
+      { name: "Sirnak" },
+      { name: "Bartin" },
+      { name: "Ardahan" },
+      { name: "Igdir" },
+      { name: "Yalova" },
+      { name: "Karabuk" },
+      { name: "Kilis" },
+      { name: "Osmaniye" },
+      { name: "Duzce" },
+    ];
+
+    const values = {
+        cities,
+        selectedCity,
+        setSelectedCity
+    }
+
+    return <CityContext.Provider value={values}> {children} </CityContext.Provider>
+}
+
+export default CityContext
